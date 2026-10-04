@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Nube</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- Panel izquierdo: usuarios conectados -->
+    <aside id="sidebar" class="sidebar">
+      <div class="perfil">
+        <div id="miAvatar" class="avatar"></div>
+        <div>
+          <div id="miNombre" class="nombre"></div>
+          <small>En línea</small>
+        </div>
+      </div>
+      <h3>Usuarios conectados (<span id="contador">0</span>)</h3>
+      <ul id="listaUsuarios"></ul>
+      <button id="btnSalir" class="btn-salir">Cerrar sesión</button>
+    </aside>
+    <div id="fondo" class="fondo-oscuro"></div>
+
+    <!-- Panel derecho: la conversación -->
+    <main class="chat">
+      <header class="chat-header">
+        <button id="btnMenu" class="btn-icono btn-menu" title="Usuarios">☰</button>
+        <div class="titulo">
+          <h2>Chat general</h2>
+          <small id="estado">Conectando...</small>
+        </div>
+        <button id="btnSonido" class="btn-icono" title="Activar/silenciar sonido">🔔</button>
+      </header>
+
+      <section id="mensajes" class="mensajes"></section>
+
+      <div id="escribiendo" class="escribiendo"></div>
+      <div id="progreso" class="progreso" hidden>
+        <div class="barra"><div></div></div>
+        <span></span>
+      </div>
+
+      <form id="formMensaje" class="barra-envio">
+        <label class="btn-adjuntar" title="Enviar archivo">📎
+          <input type="file" id="inputArchivo" hidden>
+        </label>
+        <input type="text" id="inputMensaje" placeholder="Escribe un mensaje"
+               autocomplete="off" maxlength="2000">
+        <button type="submit" class="btn-enviar" title="Enviar">➤</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/chat.js"></script>
+</body>
+</html>

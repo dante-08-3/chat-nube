@@ -1,0 +1,28 @@
+{
+  "name": "chat-nube",
+  "version": "1.0.0",
+  "description": "Chat en tiempo real con Node, Socket.io y AWS EC2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dante-08-3/chat-nube.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dante-08-3/chat-nube/issues"
+  },
+  "homepage": "https://github.com/dante-08-3/chat-nube#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "multer": "^2.4.0",
+    "socket.io": "^4.8.4"
+  }
+}
